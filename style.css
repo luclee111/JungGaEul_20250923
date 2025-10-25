@@ -1507,21 +1507,66 @@ body, html {
   }
 }
 
-/* 도움말 아이콘 */
+/* 도움말 아이콘 - blur + subtle glow + accessible focus */
 .slider-help-icon {
   position: absolute;
   top: 120px;
   right: 5%;
-  width: 50px;
-  height: 50px;
-  background: rgba(0,0,0,0.7);
+  width: 54px;
+  height: 54px;
+
+  /* 배경은 밝은 반투명으로 하여 어두운 원 대신 '유리판' 같은 느낌 */
+  background: rgba(255, 255, 255, 0.06);
+
+  /* 배경 블러 (크롬/사파리용 프리픽스 포함) */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: transform 0.3s ease;
+
+  /* 윤곽선 + 내부 광택으로 더 자연스럽게 */
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow:
+    0 10px 20px rgba(6,8,12,0.45),    /* 외부 그림자: 깊이 */
+    inset 0 1px 0 rgba(255,255,255,0.03); /* 내부 미세 하이라이트 */
+
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
   z-index: 100;
+  color: #fff;
+}
+
+/* 아이콘 크기/투명도 조정 (머테리얼 아이콘 사용 시) */
+.slider-help-icon .material-icons {
+  font-size: 22px;
+  opacity: 0.96;
+}
+
+/* hover / focus 시 밝아지고 떠오르는 느낌 */
+.slider-help-icon:hover,
+.slider-help-icon:focus {
+  transform: translateY(-3px) scale(1.03);
+  background: rgba(255,255,255,0.09);
+  box-shadow:
+    0 16px 36px rgba(6,8,12,0.55),
+    0 4px 10px rgba(0,0,0,0.18);
+  outline: none;
+}
+
+/* 클릭(누를 때) 피드백 */
+.slider-help-icon:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+/* 키보드 접근성: 포커스 표시 */
+.slider-help-icon:focus-visible {
+  box-shadow:
+    0 10px 24px rgba(6,8,12,0.48),
+    0 0 0 4px rgba(30,144,255,0.12);
+  border-color: rgba(255,255,255,0.14);
 }
 
 /* hover했을 때 살짝 커짐 */
