@@ -1324,7 +1324,7 @@ body, html {
 }
 
 /* 사이드바 세로선: 사이드바 내부에서 다른 요소 뒤로 보이게 (선은 컨테이너 내부이므로 z-index 음수보다 0으로) */
-.nav-line {
+/*.nav-line {
   display: none !important
   /* position: absolute;
   left: 6px;
