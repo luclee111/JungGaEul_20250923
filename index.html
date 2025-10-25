@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>My Life On Air</title>
+  
+  <!-- 구글 폰트: Noto Serif KR -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  
+  <!-- 사용자 스타일시트 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+          
+  <!-- HTML 부분 - 이것을 <body> 태그 바로 아래에 추가하세요 -->
+    <div class="sidebar-navigation">
+      <ul class="nav-list">
+        <li class="nav-item" data-section="landing-content">
+          <a href="#landing-content" class="nav-link">
+            <span class="nav-dot"></span>
+            <span class="nav-text">메인</span>
+          </a>
+        </li>
+        <li class="nav-item" data-section="slider">
+          <a href="#slider" class="nav-link">
+            <span class="nav-dot"></span>
+            <span class="nav-text">팔자소개</span>
+          </a>
+        </li>
+        <li class="nav-item" data-section="detailed-analysis">
+          <a href="#detailed-analysis" class="nav-link">
+            <span class="nav-dot"></span>
+            <span class="nav-text">상세</span>
+          </a>
+        </li>
+        <li class="nav-item" data-section="fortune-summary">
+          <a href="#fortune-summary" class="nav-link">
+            <span class="nav-dot"></span>
+            <span class="nav-text">카드요약</span>
+          </a>
+        </li>
+        <li class="nav-item" data-section="final-narrative">
+          <a href="#final-narrative" class="nav-link">
+            <span class="nav-dot"></span>
+            <span class="nav-text">마지막</span>
+          </a>
+        </li>
+      </ul>
+      <div class="nav-line"></div>
+    </div>
+
+    <div class="fullscreen-menu">
+        <button class="menu-close" aria-label="Close Menu">✖</button>
+        <ul class="nav-list">
+          <li class="nav-item" data-section="header">
+            <a href="#landing-content" class="nav-link">메인</a>
+          </li>
+          <li class="nav-item" data-section="birth-chart">
+            <a href="#birth-chart" class="nav-link">팔자</a>
+          </li>
+          <li class="nav-item" data-section="daewoon">
+            <a href="#daewoon" class="nav-link">대운</a>
+          </li>
+          <li class="nav-item" data-section="sewoon">
+            <a href="#sewoon" class="nav-link">세운</a>
+          </li>
+          <li class="nav-item" data-section="detailed-analysis">
+            <a href="#detailed-analysis" class="nav-link">상세</a>
+          </li>
+          <li class="nav-item" data-section="fortune-summary">
+            <a href="#fortune-summary" class="nav-link">카드요약</a>
+          </li>
+          <li class="nav-item" data-section="final-narrative">
+            <a href="#final-narrative" class="nav-link">마지막</a>
+          </li>
+        </ul>
+      </div>
+  
+  <!-- 페이지 헤더 -->
+  <header id="main-header" class="sticky-header">
+  <div class="header-container">
+    <!-- 로고 -->
+    <div class="logo">
+      <img id="large-logo" src="./images/Logo.png" alt="큰 로고">
+      <img id="small-logo" src="./images/small-logo.png" alt="작은 로고">
+      <img id="sticky-logo" src="./images/sticky-logo.png" alt="스티키 로고">
+    </div>
+    <!-- 메뉴 -->
+    <nav class="menu">
+      <ul>
+        <li class="menu-item active"><a href="#landing-content">홈</a></li>
+        <li class="menu-item"><a href="#birth-chart">팔자소개</a></li>
+        <li class="menu-item"><a href="#detailed-analysis">상세</a></li>
+        <li class="menu-item"><a href="#fortune-summary">카드요약</a></li>
+        <li class="menu-item"><a href="#final-narrative">마지막</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger-menu">
+      ☰ <!-- 햄버거 아이콘 -->
+    </div>
+  </div>
+</header>
+
+<!-- 랜딩 페이지 섹션 -->
+<div class="landing-page">
+  <!-- 핵심 메시지 섹션 -->
+  <section class="landing-content" id="landing-content">
+    <h2>나의 팔자를 읽다</h2>
+    <p>
+      당신의 팔자를 대운과 세운의 흐름을 따라 분석하고, 
+      사주 풍경을 통해 당신의 삶의 이야기를 소개합니다. 
+      이를 통해 당신의 현재와 미래를 이해하고, 주도적인 삶을 설계할 수 있도록 돕습니다.
+    </p>
+
+    <div class="key-features">
+      <div class="feature">
+        <h3>팔자 소개</h3>
+        <p>당신의 명리학을 기반으로 한 팔자의 흐름과 성격을 소개합니다.</p>
+      </div>
+      <div class="feature">
+        <h3>상세 분석</h3>
+        <p>대운과 세운의 주요 흐름과 잠재된 기회를 상세히 분석합니다.</p>
+      </div>
+      <div class="feature">
+        <h3>카드 요약</h3>
+        <p>당신의 사주 정보를 한눈에 파악할 수 있는 요약된 카드 형식 제공.</p>
+      </div>
+    </div>
+    <button class="cta-button">지금 내 사주 보기</button>
+    <p>당신의 사주를 기반으로 한 특별한 이야기를 시작해보세요.</p>
+  </section>
+</div>  
+  
+  <!-- 주인공 소개 섹션 -->
+<div class="slider" id="slider">
+
+  <div class="slider-container">
+
+    <section id="birth-chart">
+      <div class="slider-help-icon" id="slider-help-icon-1" aria-label="Open Help">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 
+            0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-3h2v2h-2zm2.07-7.75c-.9.22-1.57.98-1.57
+            1.89h-2c0-1.66 1.34-3 3-3 .78 0 1.48.3 2.02.77.55.47.98 1.13 1.15 1.86.09.36.13.73.13 1.11
+            0 1.25-.99 2.27-2.24 2.47V17h-2v-1.5c0-.28.22-.5.5-.5h.5c.55 0 1-.45 1-1 0-.55-.45-1-1-1
+            -.28 0-.5-.22-.5-.5s.22-.5.5-.5c.83 0 1.5-.67 1.5-1.5 0-.68-.43-1.26-1.07-1.46z"/>
+          </svg>
+      </div>
+
+       <div id="slider-nav-guide-1" class="slider-nav-guide">
+            <div class="slider-guide-content">
+              <button id="slider-guide-close-1" class="slider-guide-close" aria-label="Close Guide">✖</button>
+          
+              <div class="swiper guide-swiper"> <!-- ✅ 여기 swiper-container 아니라 swiper 클래스만 -->
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <video class="guide-video" autoplay muted playsinline>
+                        <source src="videos/slider-navigation(2).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    <p class="guide-text">중앙 하단의 화살표 및 아이콘을 이용해 나만의 팔자, 대운 그리고 세운의 사주 풍경을 확인해보실 수 있습니다.</p>
+                  </div>
+                  <div class="swiper-slide">
+                    <video class="guide-video" autoplay muted playsinline>
+                        <source src="videos/slider-navigation(2).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    <p class="guide-text">화살표로 슬라이드 넘기기</p>
+                  </div>
+                </div>
+          
+                <!-- 페이징 점점점 표시 -->
+                <div class="swiper-pagination guide-pagination"></div>
+          
+              </div>
+          
+            </div>
+    </div>
+
+      
+      <h2>주인공 소개</h2>
+      <p>나는 어떤 기운을 타고났을까?</p>
+      <a href="birth-chart-detail.html" class="detail-btn">자세히 보기</a>
+    </section>
+  
+    <section id="daewoon">
+      <h2>시작된 Season 3</h2>
+      <p>10년 만에 바뀐 무대 위, 호상의 운명은?</p>
+      <a href="daewoon-detail.html" class="detail-btn">자세히 보기</a>
+    </section>
+      
+    <section id="sewoon">
+      <h2>S3 E1: 2025, 을사년도</h2>
+      <p>올해의 연운이 나에게 어떤 도전을 줄까?</p>
+      <a href="sewoon-detail.html" class="detail-btn">자세히 보기</a>
+    </section>
+ </div>
+  
+<div class="nav-helper-container">
+          <button class="slider-arrow left-arrow">←</button>
+          <div class="nav-item" data-target="#birth-chart" style="--icon-size: 50px;">
+            <img src="images/Logo.png" alt="팔자 아이콘">
+          </div>
+          <div class="nav-item" data-target="#daewoon" style="--icon-size: 50px;">
+            <img src="images/Logo.png" alt="대운 아이콘">
+          </div>
+          <div class="nav-item" data-target="#sewoon" style="--icon-size: 50px;">
+            <img src="images/Logo.png" alt="세운 아이콘">
+          </div>
+            <button class="slider-arrow right-arrow">→</button>
+    </div>
+  
+</div>
+  
+  <!-- 상세 분석 및 기타 콘텐츠 -->
+  <section id="detailed-analysis">
+    
+    <!-- ❓ 2번 Help 아이콘 -->
+    <div class="slider-help-icon" id="slider-help-icon-2" aria-label="Open Help">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 
+            0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-3h2v2h-2zm2.07-7.75c-.9.22-1.57.98-1.57
+            1.89h-2c0-1.66 1.34-3 3-3 .78 0 1.48.3 2.02.77.55.47.98 1.13 1.15 1.86.09.36.13.73.13 1.11
+            0 1.25-.99 2.27-2.24 2.47V17h-2v-1.5c0-.28.22-.5.5-.5h.5c.55 0 1-.45 1-1 0-.55-.45-1-1-1
+            -.28 0-.5-.22-.5-.5s.22-.5.5-.5c.83 0 1.5-.67 1.5-1.5 0-.68-.43-1.26-1.07-1.46z"/>
+      </svg>
+    </div>
+    
+    <!-- 2번 가이드 오버레이 -->
+    <div id="slider-nav-guide-2" class="slider-nav-guide">
+      <div class="slider-guide-content">
+        <button id="slider-guide-close-2" class="slider-guide-close" aria-label="Close Guide">✖</button>
+    
+        <div class="swiper guide-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <video class="guide-video" muted playsinline>
+                <source src="videos/slider-navigation(2).mp4" type="video/mp4">
+              </video>
+              <p class="guide-text">2번 가이드: 첫 번째 안내</p>
+            </div>
+            <div class="swiper-slide">
+              <video class="guide-video" muted playsinline>
+                <source src="videos/slider-navigation(2).mp4" type="video/mp4">
+              </video>
+              <p class="guide-text">2번 가이드: 두 번째 안내</p>
+            </div>
+          </div>
+          <div class="swiper-pagination guide-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    
+    <h3>나의 팔자</h3>
+    <div id="personal-info">
+      <p><strong>이름:</strong> 이호상</p>
+      <p><strong>생년월일:</strong> 1995/03/06 08:45</p>
+    </div>
+
+    <!-- 4기둥 표 예시 -->
+    <div id="four-pillars">
+      <table id="four-pillars-table">
+       <thead>
+          <tr>
+            <th>시주</th>
+            <th>일주</th>
+            <th>월주</th>
+            <th>연주</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>편관</strong></td>
+            <td>본원</td>
+            <td><strong>식신</strong></td>
+            <td><strong>정인</strong></td>
+          </tr>
+          <tr>
+            <td>壬<br>임</td>
+            <td>丙<br>병</td>
+            <td>戊<br>무</td>
+            <td>乙<br>을</td>
+          </tr>
+          <tr>
+            <td>辰<br>진</td>
+            <td>申<br>신</td>
+            <td>寅<br>인</td>
+            <td>亥<br>해</td>
+          </tr>
+          <tr>
+            <td>을 · 계 · 무</td>
+            <td>무 · 임 · 경</td>
+            <td>무 · 병 · 갑</td>
+            <td>무 · 갑 · 임</td>
+          </tr>
+          <tr>
+            <td><strong>식신</strong></td>
+            <td><strong>편재</strong></td>
+            <td><strong>편인</strong></td>
+            <td><strong>편관</strong></td>
+          </tr>
+          <tr>
+            <td>관대</td>
+            <td>병</td>
+            <td>장생</td>
+            <td>절</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+<script>
+  const elementMap = {
+    // 한자
+    '甲': 'wood', '乙': 'wood', '寅': 'wood', '卯': 'wood',
+    '丙': 'fire', '丁': 'fire', '巳': 'fire', '午': 'fire',
+    '戊': 'earth', '己': 'earth', '辰': 'earth', '戌': 'earth', '丑': 'earth', '未': 'earth',
+    '庚': 'metal', '辛': 'metal', '申': 'metal', '酉': 'metal',
+    '壬': 'water', '癸': 'water', '子': 'water', '亥': 'water',
+    // 한글 독음
+    '갑': 'wood', '을': 'wood', '인': 'wood', '묘': 'wood',
+    '병': 'fire', '정': 'fire', '사': 'fire', '오': 'fire',
+    '무': 'earth', '기': 'earth', '진': 'earth', '술': 'earth', '축': 'earth', '미': 'earth',
+    '경': 'metal', '신': 'metal', '유': 'metal',
+    '임': 'water', '계': 'water', '자': 'water', '해': 'water'
+  };
+
+  document.querySelectorAll('#four-pillars-table td').forEach(td => {
+    // 먼저 한자 스타일 처리
+    td.innerHTML = td.innerHTML.replace(
+      /([甲乙丙丁戊己庚辛壬癸子丑寅卯辰巳午未申酉戌亥])/g,
+      (match) => {
+        const cls = elementMap[match];
+        return cls
+          ? `<span class="${cls}" style="padding: 2px 4px; border-radius: 4px;">${match}</span>`
+          : match;
+      }
+    );
+
+    // 한글 조합 처리 (· 있는 경우)
+    const text = td.innerText.trim();
+    if (text.includes('·')) {
+      td.innerHTML = text.split('·').map(part => {
+        const char = part.trim();
+        const cls = elementMap[char];
+        return cls
+          ? `<span class="${cls}-text" style="margin: 0 4px;">${char}</span>`
+          : `<span style="margin: 0 4px;">${char}</span>`;
+      }).join('<span style="margin: 0 4px;">·</span>');
+    }
+  });
+</script>
+
+
+
+    
+    <!-- 왕관 차트 예시 -->
+    <div id="crown-chart">
+      <h3>나의 팔자 파라미터</h3>
+      <div class="chart-container">
+        <svg viewBox="0 0 1300 800" preserveAspectRatio="xMidYMid meet" stroke="none">
+          <!-- 배경 이미지 -->
+          <image x="0" y="120" width="1500" height="900" href="./images/Palja_Param_Portrait.png" />
+          <!-- 베이스 원 및 왕관 패스 -->
+          <circle id="base-circle" fill="none" stroke="white" stroke-width="0"></circle>
+          <path id="black-crown-path" fill="none" stroke="white" stroke-width="1"></path>
+          <path id="orange-crown-path" fill="rgba(255,255,0,0.6)" stroke="none"></path>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+     <div class="fortune-cards-container">
+        <!-- 운세 요약 카드 섹션 -->
+        <section id="fortune-summary" class="fortune-summary">
+           <h2 class="section-title">2025 기회의 순간</h2>
+            <div class="swiper-container opportunities-swiper">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <div class="card opportunity-card">
+                    <div class="card-header">
+                      <span class="card-icon">🔥</span>
+                      <h3>부활</h3>
+                    </div>
+                    <div class="card-content">
+                      <p>새로운 10년의 시작, 호상님의 내면에 숨겨진 심오한 에너지가 깨어나고 있습니다.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                  <div class="card opportunity-card">
+                    <div class="card-header">
+                      <span class="card-icon">💧</span>
+                      <h3>정화</h3>
+                    </div>
+                    <div class="card-content">
+                      <p>과거의 감정과 경험을 조용히 흘려보내며, 내면의 깊은 물결을 정화하는 시기입니다.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <div class="card opportunity-card">
+                    <div class="card-header">
+                      <span class="card-icon">🌱</span>
+                      <h3>선별</h3>
+                    </div>
+                    <div class="card-content">
+                      <p>흔들리는 순간 속에서 진정으로 원하는 것들을 명확히 선별하고 집중할 기회가 다가옵니다.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 추가 슬라이드는 기존 컨텐츠에 맞게 추가 -->
+              </div>
+              <!-- Pagination for opportunities -->
+            <div class="swiper-pagination opportunities-pagination"></div>
+            </div>
+
+           <h2 class="section-title">2025 도전의 순간</h2>
+            <div class="swiper-container challenges-swiper">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <div class="card challenge-card">
+                    <div class="card-header">
+                      <span class="card-icon">💥</span>
+                      <h3>파열</h3>
+                    </div>
+                    <div class="card-content">
+                      <p>내면의 갈등이 최고조에 달하며, 기존의 안정된 틀을 깨뜨릴 위험이 도사리고 있습니다.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                  <div class="card challenge-card">
+                    <div class="card-header">
+                      <span class="card-icon">⚡️</span>
+                      <h3>충돌</h3>
+                    </div>
+                    <div class="card-content">
+                      <p>서로 다른 에너지와 욕구가 격렬하게 부딪치며 내적 긴장감을 고조시키고 있습니다.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <div class="card challenge-card">
+                    <div class="card-header">
+                      <span class="card-icon">📉</span>
+                      <h3>압박</h3>
+                    </div>
+                    <div class="card-content">
+                      <p>외부의 압박과 내면의 불안정한 감정들이 동시에 나를 옭아매고 있는 상황입니다.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 추가 슬라이드는 기존 컨텐츠에 맞게 추가 -->
+              </div>
+              <!-- Pagination for challenges -->
+            <div class="swiper-pagination challenges-pagination"></div>
+            </div>
+            
+            <!-- 개운법 & 피해야 할 것들 섹션 -->
+        <h2 class="section-title">개운법 및 주의사항</h2>
+         <div class="swiper-container guidance-swiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="card guidance-card">
+            <div class="card-header">
+              <span class="card-icon">🔥</span>
+              <h3>함께해요</h3>
+            </div>
+            <div class="card-content split-content">
+              <div class="guidance-column">
+                <h4><span style="color: green;">목(木) 에너지</h4>
+                <ul>
+                  <li>📚 독서, 자기계발</li>
+                  <li>🍀 식물과 함께</li>
+                  <li>💚 초록/청색계열</li>
+                  <li>🌅 동쪽</li>
+                </ul>
+              </div>
+              <div class="guidance-column">
+                <h4><span style="color: red;">화(火) 에너지</h4>
+                <ul>
+                  <li>🏃‍♂️ 유산소 운동</li>
+                  <li>🕯 따뜻한 조명</li>
+                  <li>❤️ 붉은색계열</li>
+                  <li>☀️ 남쪽</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="card avoidance-card">
+            <div class="card-header">
+              <span class="card-icon">🚫</span>
+              <h3>멀리해요</h3>
+            </div>
+            <div class="card-content">
+              <ul>
+                <li>💢 과도한 감정적 억제</li>
+                <li>⚔️ 무의미한 갈등 지속</li>
+                <li>😰 변화에 대한 두려움</li>
+                <li>🧊 찬물, 아이스커피</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="card health-card">
+                <div class="card-header">
+                    <span class="card-icon">❤️</span>
+                    <h3>주의 증상</h3>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>🩸 순환기 불균형</li>
+                        <li>😰 스트레스 축적</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="card health-card">
+                <div class="card-header">
+                    <span class="card-icon">🌈</span>
+                    <h3>회복 습관</h3>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>🌞 매일 햇볕 쬐기</li>
+                        <li>🏃 규칙적 운동</li>
+                        <li>🧘 명상 실천</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="card health-card">
+                <div class="card-header">
+                    <span class="card-icon">🍎</span>
+                    <h3>추천 음식</h3>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>🍵 생강차</li>
+                        <li>🧄 마늘</li>
+                        <li>🥬 녹색 채소</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+       <!-- Pagination for guidance -->
+      <div class="swiper-pagination guidance-pagination"></div>
+      </div>
+      </section>
+     </div>
+   
+       
+        <!-- 마무리 내러티브 섹션 -->
+        <section id="final-narrative" class="final-narrative">
+            <div class="narrative-card">
+                <div class="card-content">
+                    <h2>HP 1 남기고 레벨업!</h2>
+                    <p class="narrative-description"><strong>“What doesn’t kill you makes you stronger.”</strong></p>
+
+<p class="narrative-description">올해는 말 그대로 '체력 1 남기고 클리어하는 판'들의 연속일 가능성이 높아요. 관계에서, 일에서, 감정에서… 어딘가 계속 얻어맞는 느낌이 들 수 있죠. 하지만 그만큼, 버텼다는 건 경험치를 쌓았다는 뜻이라는 거.</p>
+
+<p class="narrative-description">중요한 건, 이 과정이 당신을 다음 레벨로 끌어올린다는 것이에요. 잠깐 주저앉아도 괜찮고, 눈물 한 번 흘려도 괜찮아요.</p>
+
+<p class="narrative-description">포션 한 병 마시고, 스킬 다시 정비하고 계속 도전해보는거에요. 결국 당신은 이겨낼 거니까요!</p>
+                    <div class="cta-buttons">
+                        <button class="cta-btn">오늘의 한마디</button>
+                        <button class="cta-secondary-btn">향후 10년 운세 요약</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+  
+  <!-- 외부 JS 라이브러리: GSAP와 ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Swiper.js JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+  <!-- 사용자 작성 스크립트 -->
+  <script src="script.js"></script>
+
+  
+</body>
+</html>
