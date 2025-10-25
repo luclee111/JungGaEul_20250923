@@ -1680,3 +1680,9 @@ body, html {
   transform: translateY(100px);
   transition: opacity 0.8s ease, transform 0.8s ease; /* ✅ 부드러운 전환 */
 }
+
+/*Help Icon button style*/
+ .help-btn{ width:40px; height:40px; display:inline-grid; place-items:center; border-radius:10px; background:rgba(255,255,255,0.06); /* 다크 UI면 이렇게, 필요시 색 조정 / border:none; color:#fff; / 아이콘 색 */ cursor:pointer; transition:transform .12s ease, box-shadow .12s ease, background .12s ease; } .help-btn:hover{ transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,0.18); } .help-btn:active{ transform:translateY(0); } .help-btn:focus{ outline:2px solid rgba(255,255,255,0.12); outline-offset:3px; }
+.material-icons{ font-size:20px; line-height:1; }
+
+.sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
