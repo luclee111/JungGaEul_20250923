@@ -1536,7 +1536,7 @@ body, html {
 
   transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
   z-index: 100;
-  color: #fff;
+  color: #2c3e50;
 }
 
 /* 아이콘 크기/투명도 조정 (머테리얼 아이콘 사용 시) */
